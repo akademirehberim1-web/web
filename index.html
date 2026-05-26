@@ -12,6 +12,29 @@
       background: #0b0f1a;
       color: #fff;
       line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ARKA PLAN LOGO (WATERMARK) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 500px;
+      height: 500px;
+      background: url("logo.png") no-repeat center;
+      background-size: contain;
+      opacity: 0.05; /* solukluk */
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    header, section, footer {
+      position: relative;
+      z-index: 1;
     }
 
     header {
@@ -63,11 +86,11 @@
       padding: 20px;
       border-radius: 10px;
       border: 1px solid #1f2a44;
+      transition: 0.3s;
     }
 
     .card:hover {
       transform: translateY(-3px);
-      transition: 0.3s;
     }
 
     footer {
@@ -84,7 +107,7 @@
       height: 60px;
       bottom: 20px;
       right: 20px;
-      z-index: 100;
+      z-index: 999;
     }
 
     .whatsapp-float img {
@@ -99,7 +122,7 @@
 <header>
   <h1>Akademi Rehberim</h1>
   <p>10+ yıldır akademik danışmanlık ve öğrenci destek hizmetleri</p>
-  <a class="btn" href="https://wa.me/+905513674303" target="_blank">
+  <a class="btn" href="https://wa.me/905513674303" target="_blank">
     WhatsApp ile İletişime Geç
   </a>
 </header>
@@ -131,7 +154,7 @@
   <h2>Hakkımızda</h2>
   <p>
     10 yıldır akademik danışmanlık alanında profesyonel hizmet veriyoruz.
-    Öğrencilerin tez, makale ve akademik çalışmalarında güvenilir destek sağlıyoruz.
+    Güvenilir, gizli ve akademik standartlara uygun destek sağlıyoruz.
   </p>
 </section>
 
@@ -143,11 +166,11 @@
 </section>
 
 <footer>
-  © 2026 Akademi Rehberim - Tüm Hakları Saklıdır
+  © 2026 Akademi Rehberim
 </footer>
 
 <!-- WhatsApp Floating Button -->
-<a class="whatsapp-float" href="https://wa.me/+905513674303" target="_blank">
+<a class="whatsapp-float" href="https://wa.me/905513674303" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
