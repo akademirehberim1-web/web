@@ -26,7 +26,7 @@
       height: 500px;
       background: url("logo.png") no-repeat center;
       background-size: contain;
-      opacity: 0.05; /* solukluk */
+      opacity: 0.05;
       transform: translate(-50%, -50%);
       z-index: 0;
       pointer-events: none;
@@ -37,10 +37,19 @@
       z-index: 1;
     }
 
+    /* HEADER */
     header {
-      padding: 80px 20px;
+      padding: 70px 20px;
       text-align: center;
       background: radial-gradient(circle at top, #111a2e, #070a12);
+    }
+
+    /* ÜST LOGO (BANNER LOGO) */
+    .top-logo {
+      width: 110px;
+      height: auto;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 10px rgba(212,175,55,0.4));
     }
 
     header h1 {
@@ -120,8 +129,12 @@
 <body>
 
 <header>
+  <!-- ÜST LOGO -->
+  <img src="logo.png" class="top-logo" alt="Akademi Rehberim Logo">
+
   <h1>Akademi Rehberim</h1>
   <p>10+ yıldır akademik danışmanlık ve öğrenci destek hizmetleri</p>
+
   <a class="btn" href="https://wa.me/905513674303" target="_blank">
     WhatsApp ile İletişime Geç
   </a>
