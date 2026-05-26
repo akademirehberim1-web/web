@@ -6,134 +6,201 @@
   <title>Akademi Rehberim | Akademik Danışmanlık</title>
 
   <style>
+
+    *{
+      box-sizing:border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0b0f1a;
+
+      background:
+      linear-gradient(
+      rgba(5,10,20,0.82),
+      rgba(5,10,20,0.88)
+      ),
+      url("arkaplan.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
       color: #fff;
       line-height: 1.6;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* ARKA PLAN LOGO */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      width: 520px;
-      height: 520px;
-      background: url("logo.png") no-repeat center;
-      background-size: contain;
-      opacity: 0.08;
-      transform: translate(-50%, -50%);
-      z-index: 0;
-      pointer-events: none;
-    }
-
-    header, section, footer {
+    header,
+    section,
+    footer {
       position: relative;
       z-index: 1;
     }
 
-    /* HEADER (DAHA ŞEFFAF GLASS EFFECT) */
+    /* HEADER */
     header {
-  padding: 70px 20px;
-  text-align: center;
-  background: rgba(17, 26, 46, 0.25);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: none;
-}
+      padding: 90px 20px;
+      text-align: center;
 
-    /* ÜST YUVARLAK LOGO */
+      background: rgba(17, 26, 46, 0.22);
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ÜST LOGO */
     .top-logo {
-      width: 110px;
-      height: 110px;
+      width: 115px;
+      height: 115px;
       object-fit: cover;
       border-radius: 50%;
       border: 2px solid #d4af37;
-      margin-bottom: 20px;
-      box-shadow: 0 0 18px rgba(212,175,55,0.25);
+      margin-bottom: 22px;
+
+      box-shadow:
+      0 0 25px rgba(212,175,55,0.30),
+      0 0 60px rgba(212,175,55,0.12);
     }
 
     header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+      font-size: 48px;
+      margin-bottom: 14px;
+      color: #fff;
+      letter-spacing: 1px;
     }
 
     header p {
-      color: #cfcfcf;
-      font-size: 18px;
-      margin-bottom: 8px;
+      color: #d7d7d7;
+      font-size: 19px;
+      margin-bottom: 14px;
     }
 
     .sub-info {
-      font-size: 14px;
-      color: #bdbdbd;
+      font-size: 15px;
+      color: #bfbfbf;
       margin-bottom: 10px;
     }
 
     .btn {
       display: inline-block;
-      margin: 10px 5px;
-      padding: 12px 20px;
-      background: #d4af37;
+      margin: 12px 6px;
+      padding: 14px 24px;
+
+      background: linear-gradient(135deg,#d4af37,#f1d06b);
+
       color: #000;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 8px;
       font-weight: bold;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(212,175,55,0.25);
     }
 
     .btn-telegram {
-      background: #229ED9;
+      background: linear-gradient(135deg,#229ED9,#47b7ed);
       color: #fff;
     }
 
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 70px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
     h2 {
       color: #d4af37;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
+      font-size: 32px;
+      text-align: center;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
 
     .card {
-      background: #121a2b;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid #1f2a44;
+      background: rgba(18, 26, 43, 0.72);
+
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+
+      padding: 24px;
+      border-radius: 14px;
+
+      border: 1px solid rgba(255,255,255,0.06);
+
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-5px);
+
+      border-color: rgba(212,175,55,0.45);
+
+      box-shadow:
+      0 10px 30px rgba(0,0,0,0.35),
+      0 0 20px rgba(212,175,55,0.10);
+    }
+
+    .card-title{
+      font-size:18px;
+      font-weight:bold;
+      margin-bottom:10px;
+      color:#fff;
+    }
+
+    .card-text{
+      color:#cfcfcf;
+      font-size:14px;
+    }
+
+    .about-box,
+    .contact-box{
+      background: rgba(18,26,43,0.70);
+
+      backdrop-filter: blur(10px);
+
+      padding: 35px;
+      border-radius: 16px;
+
+      border: 1px solid rgba(255,255,255,0.06);
     }
 
     footer {
       text-align: center;
-      padding: 30px;
-      background: #070a12;
+      padding: 35px;
+      background: rgba(7,10,18,0.82);
       color: #aaa;
+      margin-top: 50px;
+      border-top:1px solid rgba(255,255,255,0.05);
     }
 
     /* FLOAT BUTTONS */
+
     .float {
       position: fixed;
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
       right: 20px;
       z-index: 999;
+      transition:0.3s;
+    }
+
+    .float:hover{
+      transform:scale(1.08);
     }
 
     .whatsapp {
@@ -141,34 +208,58 @@
     }
 
     .telegram {
-      bottom: 90px;
+      bottom: 92px;
     }
 
     .float img {
-      width: 55px;
-      height: 55px;
+      width: 58px;
+      height: 58px;
     }
+
+    /* MOBILE */
+
+    @media(max-width:768px){
+
+      header{
+        padding:70px 20px;
+      }
+
+      header h1{
+        font-size:36px;
+      }
+
+      h2{
+        font-size:26px;
+      }
+
+      .btn{
+        display:block;
+        width:100%;
+        max-width:320px;
+        margin:12px auto;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
 <header>
+
   <img src="logo.png" class="top-logo" alt="Akademi Rehberim Logo">
 
   <h1>Akademi Rehberim</h1>
 
-  <p>10+ yıldır akademik danışmanlık ve öğrenci destek hizmetleri</p>
+  <p>
+    Akademik süreçlerde profesyonel danışmanlık ve analiz hizmetleri
+  </p>
 
   <div class="sub-info">
-    Alanında uzman kadro: 
-    
-    • Sağlık Bilimleri 
-   
-    • Sosyal Bilimler 
-    
-    • Fen Bilimleri 
-    
+    • Sağlık Bilimleri
+    • Sosyal Bilimler
+    • Fen Bilimleri
     • Eğitim Bilimleri
   </div>
 
@@ -183,44 +274,142 @@
   <a class="btn btn-telegram" href="http://t.me/akademirehberim" target="_blank">
     Telegram ile İletişime Geç
   </a>
+
 </header>
 
 <section>
+
   <h2>Hizmetler</h2>
+
   <div class="grid">
-    <div class="card">İntihal raporu alma</div>
-    <div class="card">İntihal oranı düşürme</div>
-    <div class="card">Tez düzenleme</div>
-    <div class="card">Makale düzenleme</div>
-    <div class="card">Literatür taraması</div>
-    <div class="card">Akademik danışmanlık</div>
+
+    <div class="card">
+      <div class="card-title">İntihal Raporu Alma</div>
+      <div class="card-text">
+        Turnitin ve benzeri sistemler üzerinden detaylı benzerlik analizi.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">İntihal Oranı Düşürme</div>
+      <div class="card-text">
+        Akademik standartlara uygun özgünleştirme desteği.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Tez Düzenleme</div>
+      <div class="card-text">
+        Yazım, kaynakça ve biçimsel akademik düzenlemeler.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Makale Düzenleme</div>
+      <div class="card-text">
+        Akademik yayın formatına uygun profesyonel revizyon.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Literatür Taraması</div>
+      <div class="card-text">
+        Güncel ve güvenilir akademik kaynak araştırmaları.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Akademik Danışmanlık</div>
+      <div class="card-text">
+        Araştırma sürecinin tüm aşamalarında uzman desteği.
+      </div>
+    </div>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>Analiz Hizmetleri</h2>
+
   <div class="grid">
-    <div class="card">SPSS Analizi</div>
-    <div class="card">GraphPad Analizi</div>
-    <div class="card">Meta-analiz</div>
-    <div class="card">Bibliyometrik analiz</div>
-    <div class="card">İstatistiksel yorumlama</div>
+
+    <div class="card">
+      <div class="card-title">SPSS Analizi</div>
+      <div class="card-text">
+        İstatistiksel veri analizi ve yorumlama hizmetleri.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">GraphPad Analizi</div>
+      <div class="card-text">
+        Bilimsel veri görselleştirme ve analiz çözümleri.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Meta-Analiz</div>
+      <div class="card-text">
+        Çoklu çalışma verilerinin sistematik değerlendirilmesi.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Bibliyometrik Analiz</div>
+      <div class="card-text">
+        Yayın ve atıf ağlarının akademik incelenmesi.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">İstatistiksel Yorumlama</div>
+      <div class="card-text">
+        Analiz sonuçlarının akademik düzeyde raporlanması.
+      </div>
+    </div>
+
   </div>
+
 </section>
 
 <section>
+
   <h2>Hakkımızda</h2>
-  <p>
-    10 yıldır akademik danışmanlık alanında profesyonel hizmet veriyoruz.
-    Güvenilir, gizlilik esaslı ve akademik standartlara uygun destek sağlıyoruz.
-  </p>
+
+  <div class="about-box">
+
+    <p>
+      Akademi Rehberim, akademik danışmanlık alanında uzun yıllardır
+      profesyonel destek sağlayan bağımsız bir danışmanlık platformudur.
+    </p>
+
+    <p>
+      Tüm süreçlerde gizlilik, etik yaklaşım ve akademik standartlar
+      temel prensip olarak benimsenmektedir.
+    </p>
+
+  </div>
+
 </section>
 
 <section>
+
   <h2>İletişim</h2>
-  <p>Telefon: +90 551 367 4303</p>
-  <p>E-posta: akademirehberim1@gmail.com</p>
-  <p>7/24 WhatsApp ve Telegram üzerinden ulaşabilirsiniz.</p>
+
+  <div class="contact-box">
+
+    <p><strong>Telefon:</strong> +90 551 367 4303</p>
+
+    <p><strong>E-posta:</strong> akademirehberim1@gmail.com</p>
+
+    <p>
+      7/24 WhatsApp ve Telegram üzerinden iletişime geçebilirsiniz.
+    </p>
+
+  </div>
+
 </section>
 
 <footer>
@@ -228,13 +417,27 @@
 </footer>
 
 <!-- WhatsApp Floating -->
-<a class="float whatsapp" href="https://wa.me/905513674303" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+
+<a class="float whatsapp"
+href="https://wa.me/905513674303"
+target="_blank">
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+alt="WhatsApp">
+
 </a>
 
 <!-- Telegram Floating -->
-<a class="float telegram" href="http://t.me/akademirehberim" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+
+<a class="float telegram"
+href="http://t.me/akademirehberim"
+target="_blank">
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+alt="Telegram">
+
 </a>
 
 </body>
