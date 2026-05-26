@@ -12,11 +12,11 @@
       background: #0b0f1a;
       color: #fff;
       line-height: 1.6;
-      position: relative;
       overflow-x: hidden;
+      position: relative;
     }
 
-    /* ARKA PLAN LOGO (WATERMARK) */
+    /* ARKA PLAN LOGO */
     body::before {
       content: "";
       position: fixed;
@@ -26,7 +26,7 @@
       height: 500px;
       background: url("logo.png") no-repeat center;
       background-size: contain;
-      opacity: 0.05;
+      opacity: 0.06;
       transform: translate(-50%, -50%);
       z-index: 0;
       pointer-events: none;
@@ -37,19 +37,23 @@
       z-index: 1;
     }
 
-    /* HEADER */
+    /* HEADER (DAHA TRANSPARAN / SOFT) */
     header {
       padding: 70px 20px;
       text-align: center;
-      background: radial-gradient(circle at top, #111a2e, #070a12);
+      background: rgba(17, 26, 46, 0.55);
+      backdrop-filter: blur(6px);
     }
 
-    /* ÜST LOGO (BANNER LOGO) */
+    /* YUVARLAK LOGO */
     .top-logo {
       width: 110px;
-      height: auto;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid #d4af37;
       margin-bottom: 20px;
-      filter: drop-shadow(0 0 10px rgba(212,175,55,0.4));
+      box-shadow: 0 0 15px rgba(212,175,55,0.25);
     }
 
     header h1 {
@@ -60,6 +64,13 @@
     header p {
       color: #cfcfcf;
       font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .sub-info {
+      font-size: 14px;
+      color: #bdbdbd;
+      margin-bottom: 15px;
     }
 
     .btn {
@@ -109,7 +120,7 @@
       color: #aaa;
     }
 
-    /* WhatsApp Button */
+    /* WhatsApp Floating */
     .whatsapp-float {
       position: fixed;
       width: 60px;
@@ -129,11 +140,20 @@
 <body>
 
 <header>
-  <!-- ÜST LOGO -->
+  <!-- YUVARLAK LOGO -->
   <img src="logo.png" class="top-logo" alt="Akademi Rehberim Logo">
 
   <h1>Akademi Rehberim</h1>
+
   <p>10+ yıldır akademik danışmanlık ve öğrenci destek hizmetleri</p>
+
+  <div class="sub-info">
+    Alanında uzman kadro: Sağlık Bilimleri • Sosyal Bilimler • Fen Bilimleri • Eğitim Bilimleri
+  </div>
+
+  <div class="sub-info">
+    7/24 WhatsApp ve Telegram üzerinden iletişime geçebilirsiniz
+  </div>
 
   <a class="btn" href="https://wa.me/905513674303" target="_blank">
     WhatsApp ile İletişime Geç
@@ -167,7 +187,7 @@
   <h2>Hakkımızda</h2>
   <p>
     10 yıldır akademik danışmanlık alanında profesyonel hizmet veriyoruz.
-    Güvenilir, gizli ve akademik standartlara uygun destek sağlıyoruz.
+    Güvenilir, gizlilik esaslı ve akademik standartlara uygun destek sağlıyoruz.
   </p>
 </section>
 
@@ -175,7 +195,7 @@
   <h2>İletişim</h2>
   <p>Telefon: +90 551 367 4303</p>
   <p>E-posta: akademirehberim1@gmail.com</p>
-  <p>7/24 WhatsApp üzerinden ulaşabilirsiniz.</p>
+  <p>7/24 WhatsApp ve Telegram üzerinden ulaşabilirsiniz.</p>
 </section>
 
 <footer>
