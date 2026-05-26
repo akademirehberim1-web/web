@@ -22,12 +22,12 @@
       position: fixed;
       top: 50%;
       left: 50%;
-      width: 500px;
-      height: 500px;
+      width: 520px;
+      height: 520px;
       background: url("logo.png") no-repeat center;
       background-size: contain;
-      opacity: 0.06;
-      transform: translate(-70%, -80%);
+      opacity: 0.08;
+      transform: translate(-50%, -50%);
       z-index: 0;
       pointer-events: none;
     }
@@ -37,15 +37,17 @@
       z-index: 1;
     }
 
-    /* HEADER (DAHA TRANSPARAN / SOFT) */
+    /* HEADER (DAHA ŞEFFAF GLASS EFFECT) */
     header {
       padding: 70px 20px;
       text-align: center;
-      background: rgba(17, 26, 46, 0.55);
-      backdrop-filter: blur(6px);
+      background: rgba(17, 26, 46, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
     }
 
-    /* YUVARLAK LOGO */
+    /* ÜST YUVARLAK LOGO */
     .top-logo {
       width: 110px;
       height: 110px;
@@ -53,7 +55,7 @@
       border-radius: 50%;
       border: 2px solid #d4af37;
       margin-bottom: 20px;
-      box-shadow: 0 0 15px rgba(212,175,55,0.25);
+      box-shadow: 0 0 18px rgba(212,175,55,0.25);
     }
 
     header h1 {
@@ -64,24 +66,29 @@
     header p {
       color: #cfcfcf;
       font-size: 18px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .sub-info {
       font-size: 14px;
       color: #bdbdbd;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin: 10px 5px;
       padding: 12px 20px;
       background: #d4af37;
       color: #000;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
+    }
+
+    .btn-telegram {
+      background: #229ED9;
+      color: #fff;
     }
 
     section {
@@ -120,19 +127,26 @@
       color: #aaa;
     }
 
-    /* WhatsApp Floating */
-    .whatsapp-float {
+    /* FLOAT BUTTONS */
+    .float {
       position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
+      width: 55px;
+      height: 55px;
       right: 20px;
       z-index: 999;
     }
 
-    .whatsapp-float img {
-      width: 60px;
-      height: 60px;
+    .whatsapp {
+      bottom: 20px;
+    }
+
+    .telegram {
+      bottom: 90px;
+    }
+
+    .float img {
+      width: 55px;
+      height: 55px;
     }
   </style>
 </head>
@@ -140,7 +154,6 @@
 <body>
 
 <header>
-  <!-- YUVARLAK LOGO -->
   <img src="logo.png" class="top-logo" alt="Akademi Rehberim Logo">
 
   <h1>Akademi Rehberim</h1>
@@ -157,6 +170,10 @@
 
   <a class="btn" href="https://wa.me/905513674303" target="_blank">
     WhatsApp ile İletişime Geç
+  </a>
+
+  <a class="btn btn-telegram" href="http://t.me/akademirehberim" target="_blank">
+    Telegram ile İletişime Geç
   </a>
 </header>
 
@@ -202,9 +219,14 @@
   © 2026 Akademi Rehberim
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a class="whatsapp-float" href="https://wa.me/905513674303" target="_blank">
+<!-- WhatsApp Floating -->
+<a class="float whatsapp" href="https://wa.me/905513674303" target="_blank">
   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- Telegram Floating -->
+<a class="float telegram" href="http://t.me/akademirehberim" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
 </a>
 
 </body>
