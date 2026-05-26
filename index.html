@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akademi Rehberim</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#06152f;
+      color:white;
+      line-height:1.6;
+    }
+
+    a{
+      text-decoration:none;
+      color:white;
+    }
+
+    header{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+      background:
+      linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+      url("logo.png") center/contain no-repeat;
+    }
+
+    .logo{
+      width:220px;
+      margin-bottom:25px;
+      border-radius:50%;
+      box-shadow:0 0 25px rgba(255,215,0,.35);
+    }
+
+    h1{
+      font-size:56px;
+      color:#d4af37;
+      margin-bottom:15px;
+      letter-spacing:2px;
+    }
+
+    .subtitle{
+      font-size:22px;
+      max-width:850px;
+      color:#ddd;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      background:#d4af37;
+      color:#06152f;
+      padding:15px 35px;
+      border-radius:40px;
+      font-weight:bold;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:white;
+      transform:scale(1.05);
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:40px;
+      color:#d4af37;
+      margin-bottom:50px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:#0d2346;
+      padding:30px;
+      border-radius:18px;
+      transition:.3s;
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 0 25px rgba(212,175,55,.25);
+    }
+
+    .card h3{
+      color:#d4af37;
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .about{
+      text-align:center;
+      max-width:900px;
+      margin:auto;
+      color:#ddd;
+      font-size:18px;
+    }
+
+    .contact{
+      background:#081a36;
+      border-radius:20px;
+      padding:50px;
+      text-align:center;
+    }
+
+    .contact p{
+      margin:15px 0;
+      font-size:20px;
+    }
+
+    footer{
+      text-align:center;
+      padding:25px;
+      border-top:1px solid rgba(255,255,255,.1);
+      color:#aaa;
+    }
+
+    @media(max-width:768px){
+      h1{
+        font-size:40px;
+      }
+
+      .subtitle{
+        font-size:18px;
+      }
+
+      .section-title{
+        font-size:32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <!-- Logo -->
+    <img src="logo.png" alt="Akademi Rehberim Logo" class="logo">
+
+    <h1>AKADEMİ REHBERİM</h1>
+
+    <p class="subtitle">
+      Akademik çalışmalarınız için profesyonel destek hizmetleri.
+      Tez, makale, intihal düzenleme ve akademik içerik süreçlerinde yanınızdayız.
+    </p>
+
+    <a href="#iletisim" class="btn">İletişime Geç</a>
+
+  </header>
+
+  <!-- Hizmetler -->
+  <section>
+    <h2 class="section-title">Hizmetlerimiz</h2>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>İntihal Raporu Alma</h3>
+        <p>Profesyonel intihal kontrolü ve detaylı raporlama hizmeti.</p>
+      </div>
+
+      <div class="card">
+        <h3>İntihal Oranı Düşürme</h3>
+        <p>Akademik metinlerde etik kurallara uygun düzenleme desteği.</p>
+      </div>
+
+      <div class="card">
+        <h3>Tez Şekilsel Düzenleme</h3>
+        <p>Üniversite formatına uygun tez düzenleme ve biçimlendirme.</p>
+      </div>
+
+      <div class="card">
+        <h3>Makale Düzenleme</h3>
+        <p>Akademik makaleler için profesyonel kontrol ve düzenleme hizmeti.</p>
+      </div>
+
+      <div class="card">
+        <h3>İçerik Oluşturma</h3>
+        <p>Akademik içerik, ödev ve araştırma desteği.</p>
+      </div>
+
+      <div class="card">
+        <h3>Konu Desteği</h3>
+        <p>Çalışma konusu belirleme ve yönlendirme desteği.</p>
+      </div>
+
+      <div class="card">
+        <h3>Literatür Taraması</h3>
+        <p>Kaynak araştırması ve akademik literatür inceleme desteği.</p>
+      </div>
+
+      <div class="card">
+        <h3>Akademik Danışmanlık</h3>
+        <p>Öğrenciler için kapsamlı akademik destek hizmetleri.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Hakkımızda -->
+  <section>
+    <h2 class="section-title">Hakkımızda</h2>
+
+    <div class="about">
+      <p>
+        Akademi Rehberim, öğrencilerin akademik süreçlerinde ihtiyaç duyduğu
+        profesyonel desteği sağlamak amacıyla kurulmuştur.
+        Tez yazımı, makale düzenleme, literatür taraması ve akademik içerik
+        oluşturma gibi alanlarda güvenilir çözümler sunuyoruz.
+      </p>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="iletisim">
+    <h2 class="section-title">İletişim</h2>
+
+    <div class="contact">
+
+      <p><strong>Telefon:</strong> +90 551 367 4303</p>
+
+      <p>
+        <strong>E-Posta:</strong>
+        <a href="mailto:akademirehberim1@gmail.com">
+          akademirehberim1@gmail.com
+        </a>
+      </p>
+
+      <p>
+        Akademik destek almak için bizimle iletişime geçebilirsiniz.
+      </p>
+
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Akademi Rehberim | Tüm Hakları Saklıdır
+  </footer>
+
+</body>
+</html>
